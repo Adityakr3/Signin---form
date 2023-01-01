@@ -27,7 +27,7 @@
     left:-50%;
     width: 420px;
     height: 520px;
-   background: linear-gradient(0deg,transparent,#f17070,#ff0000);
+   background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
    transform-origin: bottom right;
    animation: animate 6s linear infinite;
  }
@@ -38,7 +38,7 @@
     left:-50%;
     width: 418px;
     height: 518px;
-   background: linear-gradient(0deg,transparent,#f17070,#ff0000);
+   background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
    transform-origin: bottom right;
    animation: animate 6s linear infinite;
    animation-delay: -3s;
@@ -60,22 +60,58 @@
     border-radius: 8px;
     background-color: rgb(0, 0, 0);
     z-index: 9999;
-    padding: 20%  30%;
+    padding: 20%  20%;
     display: flex;
     flex-direction: column;
+    color: aliceblue;
  }
  .form h2{
-    color:rgb(166, 88, 88);
+    color:#45f3ff;
     font-size: 30px;
     font-weight:bold;
     text-align: center;
  }
  .inputbox{
     position: relative;
-    width: 500px;
+    width: 380px;
     margin-top: 35px;
  }
  .inputbox input{
     position: relative;
-    width: 50%;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+ }
+ .inputbox span{
+   position: absolute;
+   left: 0% ;
+   padding: 20px 10px 10px;
+   font-size: 1em;
+   color: gray;
+   pointer-events: none;
+   transition: 0.5s;
+   letter-spacing: 0.5em;
+ }
+ .inputbox input:valid~span,
+ .inputbox input:focus~span
+ {
+   color:#45f3ff;
+   transform: translate(-34px);
+   font-size:  0.75em;
+ }
+ .inputbox i {
+   position: absolute;
+   left:  0;
+   bottom:  0;
+   width: 100%;
+   height: 2px;
+   background-color: #45f3ff;
+   border-radius: 4px;
+   transition:  0.5s;
+   pointer-events: none;
  }
