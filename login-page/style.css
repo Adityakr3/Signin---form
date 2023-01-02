@@ -86,11 +86,12 @@
     color: black;
     font-size: 1em;
     letter-spacing: 0.05em;
+    z-index: 99;
  }
  .inputbox span{
    position: absolute;
    left: 0% ;
-   padding: 20px 10px 10px;
+   padding: 20px 0px 10px;
    font-size: 1em;
    color: gray;
    pointer-events: none;
@@ -101,17 +102,54 @@
  .inputbox input:focus~span
  {
    color:#45f3ff;
-   transform: translate(-34px);
+   transform: translateX(0px) translatey(-34px);
    font-size:  0.75em;
  }
  .inputbox i {
    position: absolute;
    left:  0;
    bottom:  0;
-   width: 100%;
+   width: 70%;
    height: 2px;
    background-color: #45f3ff;
    border-radius: 4px;
    transition:  0.5s;
    pointer-events: none;
  }
+ .inputbox input:valid~i,
+ .inputbox input:focus~i
+ {
+   height:44px;
+ }
+.links{
+   display: flex;
+   justify-content: space-between;
+}
+.links a{
+   margin: 10px 0;
+   font-size: 0.75em;
+   color: gray;
+   text-decoration: none;
+
+}
+.links a:hover,
+.links a:nth-child(2)
+{
+   color: #45f3ff;
+}
+input[type="sumit"]
+{
+   border: none;
+   outline: none;
+   background: #45f3ff;
+   padding: 11px 25px;
+   width: 100px;
+   margin-top: 4px;
+   border-radius: 4px;
+   font-weight: bold;
+   cursor: pointer;
+}
+input[type="sumit"]:active
+{
+   opacity:0.8;
+}
